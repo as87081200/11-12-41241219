@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #343a40;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Home Section */
+        #home h2 {
+            font-size: 2.5rem;
+            margin-top: 40px;
+            color: #343a40;
+        }
+
+        /* Carousel 滾動效果 */
+        .carousel-scroll-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .carousel-scroll {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .carousel-scroll img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-scroll-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-scroll-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-scroll-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 卡片設計 */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: none; /* 去除陰影 */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* 動畫效果 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Video Section */
+        .video-container iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        footer .container {
+            font-size: 1rem;
+            color: #343a40;
+        }
+
+        footer .container a {
+            color: #007bff;
+        }
+
+        footer .container a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">我的作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="me.html">關於我</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container text-center mt-5">
+        <h2>我的作品</h2>
+        <div class="carousel-scroll-wrapper">
+            <div class="carousel-scroll" id="carouselScroll">
+                <img src="image/1.jpg" alt="作品1">
+                <img src="image/2.jpg" alt="作品2">
+                <img src="image/4.jpg" alt="作品3">
+            </div>
+        </div>
+        <div class="carousel-scroll-buttons">
+            <button id="prevBtn">&lt;</button>
+            <button id="nextBtn">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Projects Cards -->
+    <div class="container mt-5">
+        <h2>作品集</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="image/6.jpg" class="card-img-top" alt="剪刀石頭布">
+                    <div class="card-body">
+                        <h5 class="card-title">剪刀石頭布</h5>
+                        <a href="https://as87081200.github.io/0918-41241219/12" target="_blank" class="btn btn-primary">查看作品</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="image/5.jpg" class="card-img-top" alt="翻卡牌遊戲">
+                    <div class="card-body">
+                        <h5 class="card-title">翻卡牌遊戲</h5>
+                        <a href="https://as87081200.github.io/123/" target="_blank" class="btn btn-primary">查看作品</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="image/7.jpg" class="card-img-top" alt="js套件介紹">
+                    <div class="card-body">
+                        <h5 class="card-title">JS套件介紹</h5>
+                        <a href="https://as87081200.github.io/11-05-41241219/" target="_blank" class="btn btn-primary">查看作品</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="image/9.jpg" class="card-img-top" alt="磚塊遊戲">
+                    <div class="card-body">
+                        <h5 class="card-title">磚塊遊戲</h5>
+                        <a href="https://as87081200.github.io/10-29-41241219/" target="_blank" class="btn btn-primary">查看作品</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Video Section -->
+<div class="video-container container">
+    <h2>影片展示</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item w-100" src="https://www.youtube.com/embed/1hVW0SQuFTA" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item w-100" src="https://www.youtube.com/embed/2YufNrnexlo" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item w-100" src="https://www.youtube.com/embed/lacgPbJQDGk" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item w-100" src="https://www.youtube.com/embed/hIiBNGrgbuM" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+hIiBNGrgbuM
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container text-center">
+            <p>© 2024 我的作品集 | 由 <a href="https://github.com/as87081200" target="_blank">GitHub</a> 開發</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#carouselScroll img');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            const offset = -index * 100;
+            document.getElementById('carouselScroll').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            nextImage();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            prevImage();
+        });
+
+        setInterval(() => {
+            nextImage();
+        }, 3000);
+    </script>
+</body>
+
+</html>

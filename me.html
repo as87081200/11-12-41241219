@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #343a40;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 50px;
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .container {
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+            line-height: 2;
+        }
+
+        .skills li {
+            font-size: 1.2rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer .container {
+            font-size: 1rem;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 4px solid #007bff;
+            padding: 5px;
+        }
+
+        .row .col-md-6 {
+            margin-bottom: 30px;
+        }
+
+        /* 使左側的個人資訊與右側的技能和經歷更有層次感 */
+        .info-column {
+            margin-bottom: 40px;
+        }
+
+        /* 調整各區塊的間距 */
+        .section-content {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section-content h3 {
+            font-size: 1.8rem;
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .info-column ul {
+            list-style-type: none;
+            padding-left: 0;
+            line-height: 1.8;
+        }
+
+        .info-column li {
+            font-size: 1.1rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">我的作品集</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="me.html">關於我</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- About Me Section -->
+<section class="container">
+    <h2>關於我</h2>
+    <img src="image/8.jpg" alt="我的照片" class="profile-image">
+    <p>你好，我是陳琨璋，一名熱愛編程和設計的開發者。我的專業領域包括網站開發、應用程式設計、以及前端和後端技術。我喜歡將創意和技術結合，打造出有趣且具有挑戰性的項目。</p>
+    <p>在工作之餘，我也喜歡探索新的技術、學習不同的編程語言，以及參與開源項目。我堅信不斷學習和成長是推動技術創新的關鍵。</p>
+
+    <!-- Personal Information -->
+    <div class="row">
+        <div class="col-md-6 info-column">
+            <div class="section-content">
+                <h3>個人資訊</h3>
+                <ul>
+                    <li><strong>姓名：</strong> 陳琨璋</li>
+                    <li><strong>出生年份：</strong> 2005/05/08</li>
+                    <li><strong>居住地：</strong> 虎尾鎮</li>
+                    <li><strong>專業領域：</strong> 網站開發 / 應用程式設計 / 前端和後端技術</li>
+                    <li><strong>興趣愛好：</strong> 編程、設計、運動</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="col-md-6 info-column">
+            <div class="section-content">
+                <h3>技能</h3>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>Python</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <h3>社交媒體</h3>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3">
+                <a href="https://www.facebook.com/your-profile" target="_blank" class="text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40">
+                </a>
+            </li>
+            <li class="mx-3">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="40">
+                </a>
+            </li>
+            <li class="mx-3">
+                <a href="https://github.com/your-profile" target="_blank" class="text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40">
+                </a>
+            </li>
+            <!-- Instagram Icon -->
+            <li class="mx-3">
+                <a href="https://www.instagram.com/your-profile" target="_blank" class="text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" width="40">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+        <!-- Experience -->
+        <div class="row">
+            <div class="col-md-12 info-column">
+                <div class="section-content">
+                    <h3>經歷</h3>
+                    <p>在過去的幾年裡，我曾參與過許多項目的開發，涵蓋了網站建設、App開發及其他技術挑戰。我在虎科大擔任學生，負責設計和實施高效的技術解決方案。</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <h3 class="mt-5 section-title">聯絡我</h3>
+        <form class="contact-form">
+            <input type="text" placeholder="姓名" required>
+            <input type="email" placeholder="電子郵件" required>
+            <textarea placeholder="留言" rows="4" required></textarea>
+            <button type="submit">發送訊息</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <span class="text-muted">© 2024 我的作品集. 保留所有權利.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS and dependencies -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
